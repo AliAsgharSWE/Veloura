@@ -29,8 +29,7 @@ export const navLinksAuth = [
     title: routes.CART.title,
     href: routes.CART.path,
     icon: shoppingBag,
-    variant: "secondary",
-    size: "sm",
+  
   },
   {
     title: routes.PROFILE.title,

@@ -17,11 +17,8 @@ const Navbar = () => {
           <a
             key={link.href}
             href={link.href}
-            className="text-base font-medium hover:opacity-70 transition-opacity"
-            style={{ 
-              color: 'var(--text-primary, #000000)',
-              fontFamily: 'var(--font-poppins, "Poppins", sans-serif)'
-            }}
+            className="text-base font-normal  hover:text-text-secondary"
+          
           >
             {link.title}
           </a>
