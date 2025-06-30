@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🏗️ Running build checks before pushing..."
+echo "🏗️ Making sure your project builds before pushing..."
 
 yarn build
 RESULT=$?
@@ -9,7 +9,7 @@ if [ $RESULT -ne 0 ]; then
   echo ""
   echo "❌ Build failed!"
   echo "💡 Please fix the build errors before pushing."
-  echo "💡 You can run 'yarn build' locally to investigate."
+  echo "💡 Run 'yarn build' locally to debug."
   exit 1
 fi
 

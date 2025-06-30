@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🔍 Checking your code before committing..."
+echo "🎨 Making your code pretty and perfect before committing..."
 
 yarn lint-staged
 RESULT=$?
@@ -9,8 +9,8 @@ if [ $RESULT -ne 0 ]; then
   echo ""
   echo "❌ Linting or formatting failed!"
   echo "💡 Please fix the above issues before committing."
-  echo "💡 You can run 'yarn lint' or 'yarn format' to help fix them."
+  echo "💡 You can also run 'yarn lint' or 'yarn format' manually."
   exit 1
 fi
 
-echo "✅ Code looks good! Proceeding with commit."
+echo "✅ Code is perfect and pretty! Proceeding with commit."
