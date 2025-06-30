@@ -6,6 +6,7 @@
 
   --bg-light: #EFEFEF;
   --bg-dark: #D8D8D8;
+  --bg-ternary: #a18a68
   --text-primary: #000000;
   --text-secondary: #A18A68;
   --text-ternary: #707070;
@@ -29,6 +30,13 @@ body {
 
 .bg-light {
   background-color: var(--bg-light);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+.bg-ternary {
+  background-color: var(--bg-ternary);
 }
 
 .text-primary {
