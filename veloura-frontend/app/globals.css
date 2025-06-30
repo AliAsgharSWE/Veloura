@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-@theme {
+:root {
+  /* Colors */
     --background: #ffffff;
 
   --bg-light: #EFEFEF;
@@ -23,4 +24,41 @@ body {
   background-color: var(--background);
   color: var(--text-primary);
   font-family: var(--font-poppins);
+}
+
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-ternary {
+  color: var(--text-ternary);
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+}
+
+.text-subheading {
+  font-size: var(--text-subheading);
+}
+
+.text-body {
+  font-size: var(--text-body);
+}
+
+.text-meta {
+  font-size: var(--text-meta);
+}
+
+.text-small {
+  font-size: var(--text-small);
 }
