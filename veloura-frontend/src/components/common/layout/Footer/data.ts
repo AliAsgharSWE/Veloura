@@ -1,24 +1,50 @@
 import { routes } from "@/src/constants/routes";
+import { FooterData } from './types';
 
-export const footerLinks = [
-  { title: routes.HOME.title, href: routes.HOME.path },
-  { title: routes.PRICING.title, href: routes.PRICING.path },
-  { title: routes.API_INTEGRATION.title, href: routes.API_INTEGRATION.path },
-  { title: routes.CONTACT_US.title, href: routes.CONTACT_US.path },
-];
-
-export const socialLinks = [
-  { href: "#", icon: "/icons/facebook.svg", alt: "Facebook" },
-  { href: "#", icon: "/icons/twitter.svg", alt: "Twitter" },
-  { href: "#", icon: "/icons/vimeo.svg", alt: "Vimeo" },
-  { href: "#", icon: "/icons/youtube.svg", alt: "YouTube" },
-];
-
-export const legalLinks = [
-  { href: "/terms", title: "Terms of Service" },
-  { href: "/privacy", title: "Privacy Policy" },
-];
-
-export const copyrightData = {
-  text: "© 2025 VEEDIT. All rights reserved.",
+export const footerData: FooterData = {
+  links: [
+   {
+    title: routes.CONTACT.title,
+    href: routes.CONTACT.path,
+  },
+  {
+    title: routes.TERMS_OF_SERVICES.title,
+    href: routes.TERMS_OF_SERVICES.path,
+  },
+  {
+    title: routes.SHIPPING_AND_RETURNS.title,
+    href: routes.SHIPPING_AND_RETURNS.path,
+  },
+  ],
+  socialLinks: [
+    {
+      name: "LinkedIn",
+      href: "https://linkedin.com",
+      icon: "/linkedIn.svg"
+    },
+    {
+      name: "Facebook",
+      href: "https://facebook.com",
+      icon: "/facebook.svg"
+    },
+    {
+      name: "Instagram",
+      href: "https://instagram.com",
+      icon: "/instagram.svg"
+    },
+    {
+      name: "Twitter",
+      href: "https://twitter.com",
+      icon: "/twitter.svg"
+    }
+  ],
+  companyName: "Shelly",
+  year: 2021,
+  legalLinks: {
+    termsOfUse: "/terms-of-use",
+    privacyPolicy: "/privacy-policy"
+  },
+  newsletter: {
+    placeholder: "Give an email, get the newsletter."
+  }
 };

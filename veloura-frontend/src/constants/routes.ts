@@ -62,10 +62,22 @@ export const routes = {
     description: 'Create a new account with Veloura to start shopping.',
   },
 
-  CONTACT_US: {
-    title: 'Contact Us',
+  CONTACT: {
+    title: 'CONTACT',
     path: '/contact-us',
     metaTitle: 'Contact Us - Veloura',
     description: 'Get in touch with Veloura for support and inquiries.',
   },
+  TERMS_OF_SERVICES: {
+    title: 'TERMS OF SERVICES',
+    path: '/terms-of-services',
+    metaTitle: 'Terms of Services - Veloura',
+    description: 'Read the terms of services for using Veloura\'s website and services.',
+    },
+    SHIPPING_AND_RETURNS: {
+    title: 'SHIPPING AND RETURNS',
+    path: '/shipping-and-returns',
+    metaTitle: 'Shipping and Returns - Veloura',
+    description: 'Learn about shipping and returns policies for Veloura\'s products.',
+    }
 } as const;

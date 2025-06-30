@@ -5,7 +5,7 @@ import { navLinks, navLinksAuth } from './data';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white p-4 px-20 mt-10 flex items-center justify-between relative">
+    <nav className="bg-white p-4 px-10 mt-10 flex items-center justify-between relative">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.svg" alt="Shoppe Logo" width={100} height={60} />
@@ -17,11 +17,8 @@ const Navbar = () => {
           <a
             key={link.href}
             href={link.href}
-            className="text-base font-medium hover:opacity-70 transition-opacity"
-            style={{ 
-              color: 'var(--text-primary, #000000)',
-              fontFamily: 'var(--font-poppins, "Poppins", sans-serif)'
-            }}
+            className="text-subheading font-normal hover:text-secondary"
+          
           >
             {link.title}
           </a>
@@ -43,7 +40,7 @@ const Navbar = () => {
                 alt={link.title}
                 width={20} 
                 height={20}
-                className="w-5 h-5"
+                className="w-6 h-6"
               />
             ) : (
               <span className="text-sm">{link.title}</span>
