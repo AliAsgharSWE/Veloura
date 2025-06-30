@@ -3,3 +3,4 @@
 # Run lint-staged to lint only staged files
 echo " 🚀 Running lint-staged"
 yarn lint-staged
+yarn run build
