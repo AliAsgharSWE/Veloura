@@ -6,19 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
     "prepare": "husky install ../.git/hooks",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write ."
-=======
-    "lint": "next lint",
-    "prepare": "husky install"
-  },
-   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write"
-    ]
->>>>>>> 87cd2a30820ab351a1688f9c6aaa2a04610f0319
   },
   "dependencies": {
     "lucide-react": "^0.525.0",
@@ -32,7 +22,6 @@
     "@types/node": "^20",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-<<<<<<< HEAD
     "eslint": "^9.30.0",
     "eslint-config-next": "^15.3.4",
     "eslint-config-prettier": "^10.1.5",
@@ -40,10 +29,6 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
-=======
-    "husky": "^8.0.0",
-    "lint-staged": "^16.1.2",
->>>>>>> 87cd2a30820ab351a1688f9c6aaa2a04610f0319
     "tailwindcss": "^4",
     "typescript": "^5.8.3"
   },
