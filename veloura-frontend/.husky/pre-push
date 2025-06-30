@@ -1,16 +1,11 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+echo "Running pre-push hook"
 
-echo "🏗️ Making sure your project builds before pushing..."
-
-yarn build
-RESULT=$?
-if [ $RESULT -ne 0 ]; then
-  echo ""
-  echo "❌ Build failed!"
-  echo "💡 Please fix the build errors before pushing."
-  echo "💡 Run 'yarn build' locally to debug."
+# Build the app
+echo "🚀✨ Building the app before push... 🔨📦"
+if ! yarn build; then
+  echo "❌🚫 Build failed. 🔍 Please fix the errors before pushing. 🛠️"
   exit 1
 fi
 
-echo "🚀 Build successful! Proceeding with push."
+echo "✅🎉 Build succeeded! 🚀 Moving forward with the push... 📤✨"
