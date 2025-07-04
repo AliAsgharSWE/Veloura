@@ -21,8 +21,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   onAddToWishlist,
 }) => {
   return (
-    <div className="w-full max-w-[377px] p-4">
-      <div className="relative group overflow-hidden rounded-md">
+       <div className="group cursor-pointer">
+      <div className="relative overflow-hidden rounded-lg bg-gray-100 aspect-square mb-4">
         <Image
           src={imageSrc}
           alt={title}
