@@ -36,9 +36,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased flex flex-col min-h-screen bg-[#F9F8FF] text-[#1B1B1F]`}
       >
+        <div className="px-8">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        </div>
       </body>
     </html>
   );
