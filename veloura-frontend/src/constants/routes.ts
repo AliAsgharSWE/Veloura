@@ -43,9 +43,9 @@ export const routes = {
     metaTitle: 'Your Cart - Veloura',
     description: 'Review and manage your shopping cart at Veloura.',
   },
-  PROFILE: {
+  ACCOUNT: {
     title: 'Profile',
-    path: '/profile',
+    path: '/accounts',
     metaTitle: 'Your Profile - Veloura',
     description: 'Manage your account and preferences at Veloura.',
   },
@@ -64,7 +64,7 @@ export const routes = {
 
   CONTACT: {
     title: 'CONTACT',
-    path: '/contact-us',
+    path: '/contact',
     metaTitle: 'Contact Us - Veloura',
     description: 'Get in touch with Veloura for support and inquiries.',
   },

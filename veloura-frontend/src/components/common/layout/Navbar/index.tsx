@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-8 mt-4 md:mt-0 md:ml-8">
           {navLinksAuth.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="hover:opacity-70 transition-opacity"
@@ -57,7 +57,7 @@ const Navbar = () => {
               ) : (
                 <span className="text-sm">{link.title}</span>
               )}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
