@@ -32,8 +32,8 @@ export const navLinksAuth = [
   
   },
   {
-    title: routes.PROFILE.title,
-    href: routes.PROFILE.path,
+    title: routes.ACCOUNT.title,
+    href: routes.ACCOUNT.path,
     icon: user,
   
   },
