@@ -74,10 +74,22 @@ export const routes = {
     metaTitle: 'Terms of Services - Veloura',
     description: 'Read the terms of services for using Veloura\'s website and services.',
     },
-    SHIPPING_AND_RETURNS: {
-    title: 'SHIPPING AND RETURNS',
-    path: '/shipping-and-returns',
-    metaTitle: 'Shipping and Returns - Veloura',
-    description: 'Learn about shipping and returns policies for Veloura\'s products.',
-    }
+  SHIPPING_AND_RETURNS: {
+  title: 'SHIPPING AND RETURNS',
+  path: '/shipping-and-returns',
+  metaTitle: 'Shipping and Returns - Veloura',
+  description: 'Learn about shipping and returns policies for Veloura\'s products.',
+  },
+RESET_PASSWORD: {
+  title: 'Reset Password',
+  path: '/reset-password',
+  metaTitle: 'Reset Password - Veloura',
+  description: 'Reset your password to regain access to your Veloura account.',
+},
+  FORGOT_PASSWORD: {
+    title: 'Forgot Password', 
+    path: '/forgot-password',
+    metaTitle: 'Forgot Password - Veloura',
+    description: 'If you have forgotten your password, enter your email to reset it.',
+  },
 } as const;
