@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { 
   signInFormData, 
   registerFormData, 
-  forgotPasswordFormData, 
   authTabs, 
   authConfig 
 } from './data';
@@ -12,8 +12,8 @@ import InputField from '@/src/components/common/InputField/InputField';
 import Button from '@/src/components/common/Button';
 
 const AuthPage: React.FC = () => {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState<string>('signin');
-  const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [tabs, setTabs] = useState<TabData[]>(authTabs);
   
   const [signInData, setSignInData] = useState<AuthFormData>({
@@ -29,17 +29,12 @@ const AuthPage: React.FC = () => {
     password: '',
     confirmPassword: ''
   });
-  
-  const [forgotPasswordData, setForgotPasswordData] = useState<AuthFormData>({
-    email: ''
-  });
 
   const [errors, setErrors] = useState<any>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
-    setShowForgotPassword(false);
     setTabs(prev => 
       prev.map(tab => ({
         ...tab,
@@ -50,12 +45,7 @@ const AuthPage: React.FC = () => {
   };
 
   const handleInputChange = (name: string, value: string) => {
-    if (showForgotPassword) {
-      setForgotPasswordData(prev => ({
-        ...prev,
-        [name]: value
-      }));
-    } else if (activeTab === 'signin') {
+    if (activeTab === 'signin') {
       setSignInData(prev => ({
         ...prev,
         [name]: value
@@ -87,10 +77,7 @@ const AuthPage: React.FC = () => {
     let currentFormData;
     let currentFormConfig;
 
-    if (showForgotPassword) {
-      currentFormData = forgotPasswordData;
-      currentFormConfig = forgotPasswordFormData;
-    } else if (activeTab === 'signin') {
+    if (activeTab === 'signin') {
       currentFormData = signInData;
       currentFormConfig = signInFormData;
     } else {
@@ -109,7 +96,7 @@ const AuthPage: React.FC = () => {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    if (activeTab === 'register' && !showForgotPassword) {
+    if (activeTab === 'register') {
       if (registerData.password !== registerData.confirmPassword) {
         newErrors.confirmPassword = 'Passwords do not match';
       }
@@ -131,10 +118,7 @@ const AuthPage: React.FC = () => {
     let submitData;
     let formType;
     
-    if (showForgotPassword) {
-      submitData = forgotPasswordData;
-      formType = 'Forgot Password';
-    } else if (activeTab === 'signin') {
+    if (activeTab === 'signin') {
       submitData = signInData;
       formType = 'Sign In';
     } else {
@@ -147,10 +131,12 @@ const AuthPage: React.FC = () => {
     setIsSubmitting(false);
   };
 
+  const handleForgotPassword = () => {
+    router.push('/forgot-password');
+  };
+
   const getCurrentFormData = () => {
-    if (showForgotPassword) {
-      return { data: forgotPasswordData, config: forgotPasswordFormData };
-    } else if (activeTab === 'signin') {
+    if (activeTab === 'signin') {
       return { data: signInData, config: signInFormData };
     } else {
       return { data: registerData, config: registerFormData };
@@ -165,32 +151,24 @@ const AuthPage: React.FC = () => {
         <div className=" p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-subheading mb-8">
-              {showForgotPassword ? currentConfig.title : authConfig.title}
+              {authConfig.title}
             </h1>
             
-            {showForgotPassword && (
-              <p className="text-gray-600 text-body leading-relaxed mb-6">
-                {currentConfig.description}
-              </p>
-            )}
-
-            {!showForgotPassword && (
-              <div className="flex rounded-lg bg-gray-100 p-1 mt-10">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => handleTabChange(tab.id)}
-                    className={`flex-1 py-3 px-4 text-body font-medium rounded-md transition-all cursor-pointer ${
-                      tab.isActive
-                        ? 'bg-white text-gray-900 shadow-sm'
-                        : 'text-ternary hover:text-gray-900'
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-            )}
+            <div className="flex rounded-lg bg-gray-100 p-1 mt-10">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => handleTabChange(tab.id)}
+                  className={`flex-1 py-3 px-4 text-body font-medium rounded-md transition-all cursor-pointer ${
+                    tab.isActive
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-ternary hover:text-gray-900'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -204,7 +182,7 @@ const AuthPage: React.FC = () => {
               />
             ))}
 
-            {activeTab === 'signin' && !showForgotPassword && (
+            {activeTab === 'signin' && (
               <div className="flex items-center justify-between">
                 <label className="flex items-center">
                   <input
@@ -222,7 +200,7 @@ const AuthPage: React.FC = () => {
 
             <div className="pt-4">
               <Button
-              variant='black'
+                variant='black'
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-4 px-6 rounded-md font-medium text-lg transition-all ${
@@ -234,18 +212,16 @@ const AuthPage: React.FC = () => {
             </div>
           </form>
 
-          {activeTab === 'signin' && !showForgotPassword && (
+          {activeTab === 'signin' && (
             <div className="mt-6 text-center">
               <button
-                onClick={() => setShowForgotPassword(true)}
+                onClick={handleForgotPassword}
                 className="text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
               >
                 {authConfig.forgotPasswordLink}
               </button>
             </div>
           )}
-
-       
         </div>
       </div>
     </div>
