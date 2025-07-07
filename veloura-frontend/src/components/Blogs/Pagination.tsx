@@ -10,19 +10,12 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
   };
 
   return (
-    <div className="flex justify-center items-center space-x-4 py-6">
-      <button
-        onClick={handlePrevious}
-        disabled={currentPage === 1}
-        className={`px-4 py-2 ${currentPage === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-black text-white'} rounded-none`}
-      >
-        &lt;
-      </button>
+    <div className="flex justify-center items-center space-x-2 py-6">
       {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`px-4 py-2 ${currentPage === page ? 'bg-black text-white' : 'bg-white'} rounded-none`}
+          className={`px-4 py-2 ${currentPage === page ? 'bg-black text-white' : 'bg-white'} rounded border border-gray-300`}
         >
           {page}
         </button>
@@ -30,7 +23,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
       <button
         onClick={handleNext}
         disabled={currentPage === totalPages}
-        className={`px-4 py-2 ${currentPage === totalPages ? 'bg-gray-300 cursor-not-allowed' : 'bg-white'} rounded-none`}
+        className={`px-4 py-2 ${currentPage === totalPages ? 'bg-gray-200 cursor-not-allowed' : 'bg-white'} rounded border border-gray-300`}
       >
         &gt;
       </button>

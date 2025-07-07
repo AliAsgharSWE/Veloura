@@ -75,7 +75,7 @@ export const blogData: BlogPost[] = [
     content: 'Full blog content here...',
     image: '/blogs/img1.png',
     imageAlt: 'Summer fashion essentials',
-    category: 'Style',
+    category: 'Fashion',
     date: 'September 15, 2020',
     readMoreText: 'Read More',
     author: 'Style Guru',
