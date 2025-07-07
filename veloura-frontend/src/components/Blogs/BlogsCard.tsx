@@ -23,8 +23,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
     router.push(`/blog-detail/${blog.slug}`);
   };
 
-
-
   return (
     <div 
       className={` rounded-lg overflow-hidden transition-shadow duration-300 cursor-pointer ${className}`}

@@ -15,3 +15,9 @@ export interface BlogCardProps {
   className?: string;
   onClick?: (slug: string) => void;
 }
+
+export interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}

@@ -1,5 +1,6 @@
 import { BlogCardData } from './types';
 
+
 export const sampleBlogData: BlogCardData[] = [
   {
     id: '1',
@@ -35,3 +36,4 @@ export const sampleBlogData: BlogCardData[] = [
     readMoreText: 'Read More'
   }
 ];
+
