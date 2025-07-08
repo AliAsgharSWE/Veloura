@@ -1,12 +1,24 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Image from "next/image";
-import { BlogPost } from "./types";
+import { BlogPost, Comment } from "./types";
+import CommentsSection from "@/src/components/blog-detail/CommentsSection";
 
 interface BlogDetailProps {
   blog: BlogPost;
 }
 
 const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
+    const [comments, setComments] = useState<Comment[]>(blog.comments);
+
+  const handleAddComment = (newComment: Omit<Comment, 'id'>) => {
+    const commentWithId: Comment = {
+      ...newComment,
+      id: Date.now().toString(),
+    };
+    
+    setComments(prev => [...prev, commentWithId]);
+  };
   return (
     <div className="px-6 py-12">
       <article>
@@ -65,14 +77,14 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
           <div className="pt-6 flex justify-between items-center text-subheading text-gray-600">
             <div>
               <span className="font-medium">Tags</span>
-              <span className="mx-4">———</span>
+              <div className="border border-gray-600 w-12 inline-block mx-4"></div>
               <span>{blog.tags.join(", ")}</span>
             </div>
 
             <div className="flex items-center">
-              <span className="font-medium mr-4">Share</span>
-              <span className="mx-4">———</span>
-              <div className="flex space-x-3">
+              <span className="font-medium mr-2">Share</span>
+              <div className="border border-gray-600 w-12 inline-block mx-2"></div>
+              <div className="flex space-x-4">
                 {blog.socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -94,8 +106,13 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
               </div>
             </div>
           </div>
+
         </div>
       </article>
+         <CommentsSection
+        comments={comments}
+        onAddComment={handleAddComment}
+      />
     </div>
   );
 };

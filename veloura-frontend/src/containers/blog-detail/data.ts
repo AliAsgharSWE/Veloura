@@ -1,3 +1,4 @@
+import { InputField } from '@/src/components/common/InputField/types';
 import { BlogPost } from './types';
 
 export const blogCategories = [
@@ -52,7 +53,30 @@ export const blogdetailData: BlogPost[] = [
         href: "https://twitter.com",
         icon: "/twitter.svg"
       }
-    ]
+    ],
+      comments: [
+    {
+      id: '1',
+      author: 'Scarlet withch',
+      avatar: '/blogs/avatar1.png',
+      date: '6 May, 2020',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.',
+    },
+    {
+      id: '2',
+      author: 'Kate moss',
+      avatar: '/blogs/avatar2.png',
+      date: '6 May, 2020',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.',
+    },
+    {
+      id: '3',
+      author: 'Scarlet withch',
+      avatar: '/blogs/avatar1.png',
+      date: '6 May, 2020',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+    },
+  ],
   },
   {
     id: '2',
@@ -94,6 +118,60 @@ export const blogdetailData: BlogPost[] = [
         href: "https://twitter.com",
         icon: "/twitter.svg"
       }
-    ]
+    ],
+      comments: [
+    {
+      id: '1',
+      author: 'Scarlet withch',
+      avatar: '/blogs/avatar1.png',
+      date: '6 May, 2020',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.',
+    },
+    {
+      id: '2',
+      author: 'Kate moss',
+      avatar: '/blogs/avatar2.png',
+      date: '6 May, 2020',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.',
+    },
+    {
+      id: '3',
+      author: 'Scarlet withch',
+      avatar: '/blogs/avatar1.png',
+      date: '6 May, 2020',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+    },
+  ],
   }
+];
+
+export const formFields: InputField[] = [
+  {
+    id: 'name',
+    name: 'name',
+    type: 'text',
+    placeholder: 'Enter your name*',
+    required: true,
+  },
+  {
+    id: 'email',
+    name: 'email',
+    type: 'email',
+    placeholder: 'Enter your Email*',
+    required: true,
+  },
+  {
+    id: 'website',
+    name: 'website',
+    type: 'url',
+    placeholder: 'Enter your Website',
+    required: false,
+  },
+  {
+    id: 'comment',
+    name: 'comment',
+    type: 'textarea',
+    placeholder: 'Your Comment*',
+    required: true,
+  },
 ];
