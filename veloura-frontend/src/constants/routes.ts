@@ -98,4 +98,11 @@ RESET_PASSWORD: {
     metaTitle: 'Forgot Password - Veloura',
     description: 'If you have forgotten your password, enter your email to reset it.',
   },
+PRIVACY_POLICY: {
+    title: 'Privacy Policy',
+    path: '/privacy-policy',
+    metaTitle: 'Privacy Policy - Veloura',
+    description: 'Learn about Veloura\'s privacy policy and how we protect your information.',
+  },
+  
 } as const;
