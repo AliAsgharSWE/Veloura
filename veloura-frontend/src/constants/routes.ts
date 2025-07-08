@@ -25,6 +25,12 @@ export const routes = {
     metaTitle: 'Veloura Blog - Jewelry & Watch Insights',
     description: 'Stay updated with the latest trends and insights on jewelry and watches.',
   },
+  BlOG_DETAIL: {
+    title: 'Blog Detail',
+    path: '/blog-detail',
+    metaTitle: 'Veloura Blog - Jewelry & Watch Insights',
+    description: 'Stay updated with the latest trends and insights on jewelry and watches.',
+  },
   OUR_STORY: {
     title: 'Our Story',
     path: '/our-story',
