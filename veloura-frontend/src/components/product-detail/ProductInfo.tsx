@@ -1,6 +1,6 @@
 'use client';
 
-import { Product } from '@/src/containers/product-detail/types';
+import { Product } from '@/containers/product-detail/types';
 import { useState } from 'react';
 import Button from '../common/Button';
 import Image from 'next/image';

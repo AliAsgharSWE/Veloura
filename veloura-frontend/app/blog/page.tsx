@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { routes } from "@/src/constants/routes";
+import { routes } from "@/constants/routes";
 
 export const metadata: Metadata = {
   title: routes.BLOG.metaTitle,
@@ -15,4 +15,4 @@ export const metadata: Metadata = {
   },
 };
 
-export { default } from "@/src/containers/blog";
+export { default } from "@/containers/blog";

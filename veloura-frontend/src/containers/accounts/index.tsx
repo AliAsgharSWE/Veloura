@@ -8,8 +8,8 @@ import {
   authConfig 
 } from './data';
 import { AuthFormData, TabData } from './types';
-import InputField from '@/src/components/common/InputField/InputField';
-import Button from '@/src/components/common/Button';
+import InputField from '@/components/common/InputField/InputField';
+import Button from '@/components/common/Button';
 
 const AuthPage: React.FC = () => {
   const router = useRouter();

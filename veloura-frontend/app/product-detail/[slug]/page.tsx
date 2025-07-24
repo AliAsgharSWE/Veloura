@@ -1,8 +1,8 @@
 
 
 import React from 'react';
-import { getProductBySlug } from '@/src/containers/product-detail/data';
-import { ProductDetailContainer } from '@/src/containers/product-detail';
+import { getProductBySlug } from '@/containers/product-detail/data';
+import { ProductDetailContainer } from '@/containers/product-detail';
 
 interface PageProps {
   params: {

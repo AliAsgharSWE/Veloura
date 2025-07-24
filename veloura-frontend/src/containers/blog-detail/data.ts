@@ -1,4 +1,4 @@
-import { InputField } from '@/src/components/common/InputField/types';
+import { InputField } from '@/components/common/InputField/types';
 import { BlogPost } from './types';
 
 export const blogCategories = [

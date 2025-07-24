@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import InputField from '@/src/components/common/InputField/InputField';
-import Button from '@/src/components/common/Button';
+import InputField from '@/components/common/InputField/InputField';
+import Button from '@/components/common/Button';
 
 const ResetPasswordPage: React.FC = () => {
   const router = useRouter();

@@ -1,9 +1,9 @@
-import { ProductInfo } from '@/src/components/product-detail/ProductInfo';
+import { ProductInfo } from '@/components/product-detail/ProductInfo';
 import { getProductBySlug } from './data';
 import { ProductDetailProps } from './types';
-import { ProductImageGallery } from '@/src/components/product-detail/ProductImageGallery';
-import { ProductTabs } from '@/src/components/product-detail/Product-tab';
-import { productTabsData } from '@/src/components/product-detail/Product-tab/data';
+import { ProductImageGallery } from '@/components/product-detail/ProductImageGallery';
+import { ProductTabs } from '@/components/product-detail/Product-tab';
+import { productTabsData } from '@/components/product-detail/Product-tab/data';
 
 export const ProductDetailContainer: React.FC<ProductDetailProps> = ({ slug }) => {
     const product = getProductBySlug(slug);

@@ -3,8 +3,8 @@ import React, { useState, useMemo } from 'react';
 import { Search, ChevronDown, Filter } from 'lucide-react';
 import { Product, FilterState } from './types';
 import { products, categories, sortOptions } from './data';
-import ProductCard from '@/src/components/common/ProductCard';
-import ToggleSwitch from '@/src/components/ToggleSwitch';
+import ProductCard from '@/components/common/ProductCard';
+import ToggleSwitch from '@/components/ToggleSwitch';
 
 const ShopPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

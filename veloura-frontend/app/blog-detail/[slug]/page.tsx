@@ -1,5 +1,5 @@
-import BlogDetail from "@/src/containers/blog-detail";
-import { blogdetailData } from "@/src/containers/blog-detail/data";
+import BlogDetail from "@/containers/blog-detail";
+import { blogdetailData } from "@/containers/blog-detail/data";
 import { notFound } from "next/navigation";
 
 interface Props {

@@ -1,4 +1,4 @@
-import { routes } from "@/src/constants/routes";
+import { routes } from "@/constants/routes";
 import { FooterData } from './types';
 
 export const footerData: FooterData = {

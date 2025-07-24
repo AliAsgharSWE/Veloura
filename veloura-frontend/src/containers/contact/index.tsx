@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import { contactFormData } from './data';
-import InputField from '@/src/components/common/InputField/InputField';
+import InputField from '@/components/common/InputField/InputField';
 import { ContactFormData } from './types';
-import Button from '@/src/components/common/Button';
+import Button from '@/components/common/Button';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({

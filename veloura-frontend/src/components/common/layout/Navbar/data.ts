@@ -1,4 +1,4 @@
-import { routes } from "@/src/constants/routes";
+import { routes } from "@/constants/routes";
 import search from "../../../../../public/search.svg";
 import shoppingBag from "../../../../../public/shopping-cart.svg";
 import user from "../../../../../public/user.svg";

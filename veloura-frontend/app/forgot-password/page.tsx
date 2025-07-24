@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { routes } from "@/src/constants/routes";
+import { routes } from "@/constants/routes";
 
 export const metadata: Metadata = {
   title: routes.FORGOT_PASSWORD.metaTitle,
@@ -15,4 +15,4 @@ export const metadata: Metadata = {
   },
 };
 
-export { default } from "@/src/containers/forget-password";
+export { default } from "@/containers/forget-password";

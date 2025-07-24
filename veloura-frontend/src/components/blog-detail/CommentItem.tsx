@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Comment } from '@/src/containers/blog-detail/types';
+import { Comment } from '@/containers/blog-detail/types';
 import Image from 'next/image';
 
 interface CommentItemProps {

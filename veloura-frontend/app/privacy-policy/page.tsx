@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { routes } from "@/src/constants/routes";
+import { routes } from "@/constants/routes";
 
 export const metadata: Metadata = {
   title: routes.PRIVACY_POLICY.metaTitle,
@@ -15,4 +15,4 @@ export const metadata: Metadata = {
   },
 };
 
-export { default } from "@/src/containers/privacy-policy";
+export { default } from "@/containers/privacy-policy";

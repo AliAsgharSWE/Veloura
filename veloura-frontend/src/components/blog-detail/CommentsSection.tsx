@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import CommentItem from './CommentItem';
-import { Comment, FormData, FormErrors } from '@/src/containers/blog-detail/types';
+import { Comment, FormData, FormErrors } from '@/containers/blog-detail/types';
 import InputField from '../common/InputField/InputField';
-import { formFields } from '@/src/containers/blog-detail/data';
+import { formFields } from '@/containers/blog-detail/data';
 import Button from '../common/Button';
 
 interface CommentsSectionProps {

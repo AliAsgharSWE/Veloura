@@ -1,7 +1,7 @@
 
-import ProductCard from "@/src/components/common/ProductCard";
-import HeroSection from "@/src/components/HeroSection";
-import ShopTheLatest from "@/src/components/ShopTheLatest";
+import ProductCard from "@/components/common/ProductCard";
+import HeroSection from "@/components/HeroSection";
+import ShopTheLatest from "@/components/ShopTheLatest";
 
 const HomePage = () => {
 

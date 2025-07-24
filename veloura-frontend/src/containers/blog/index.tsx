@@ -3,8 +3,8 @@ import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { blogData, blogCategories } from './data';
 import { BlogPost } from './types';
-import BlogCard from '@/src/components/Blogs/BlogsCard';
-import Pagination from '@/src/components/Blogs/Pagination';
+import BlogCard from '@/components/Blogs/BlogsCard';
+import Pagination from '@/components/Blogs/Pagination';
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

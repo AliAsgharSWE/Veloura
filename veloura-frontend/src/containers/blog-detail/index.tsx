@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { BlogPost, Comment } from "./types";
-import CommentsSection from "@/src/components/blog-detail/CommentsSection";
+import CommentsSection from "@/components/blog-detail/CommentsSection";
 
 interface BlogDetailProps {
   blog: BlogPost;
