@@ -65,12 +65,12 @@ const Footer = () => {
               Terms of use
             </a>
             <span className="text-primary"> and </span>
-            <a
+            <Link
               href={footerData.legalLinks.privacyPolicy}
               className="hover:opacity-70 transition-opacity text-ternary"
             >
               privacy policy
-            </a>
+            </Link>
             <span className="text-primary">.</span>
           </div>
 
