@@ -10,6 +10,7 @@ export const products: Product[] = [
     category: 'earrings',
     inStock: true,
     onSale: true,
+    slug: 'lira-earrings',
   },
   {
     id: '2',
@@ -19,6 +20,7 @@ export const products: Product[] = [
     category: 'earrings',
     inStock: true,
     onSale: false,
+    slug: 'golden-hoops',
   },
   {
     id: '3',
@@ -28,6 +30,7 @@ export const products: Product[] = [
     category: 'hair-accessories',
     inStock: true,
     onSale: false,
+    slug: 'kaede-hair-pin-set-of-3',
   },
   {
     id: '4',
@@ -37,6 +40,7 @@ export const products: Product[] = [
     category: 'hair-accessories',
     inStock: true,
     onSale: false,
+    slug: 'hair-pin-set-of-3',
   },
   {
     id: '5',
@@ -47,6 +51,8 @@ export const products: Product[] = [
     category: 'necklaces',
     inStock: false,
     onSale: false,
+    slug: 'plaine-necklace',
+
   },
   {
     id: '6',
@@ -56,6 +62,7 @@ export const products: Product[] = [
     category: 'hair-accessories',
     inStock: true,
     onSale: false,
+    slug: 'yuki-hair-pin-set-of-3',
   },
 ];
 
