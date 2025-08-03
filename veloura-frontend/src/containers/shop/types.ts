@@ -7,6 +7,8 @@ export interface Product {
   category: string;
   inStock: boolean;
   onSale: boolean;
+    slug: string;
+
 }
 
 export interface FilterState {

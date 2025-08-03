@@ -1,4 +1,7 @@
+'use client'; // Required for hooks in App Router
+
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'; // ✅ App Router navigation
 import React from 'react';
 
 interface ProductCardProps {
@@ -6,6 +9,7 @@ interface ProductCardProps {
   title: string;
   price: number;
   label?: string;
+  slug?: string;
   onAddToCart?: () => void;
   onQuickView?: () => void;
   onAddToWishlist?: () => void;
@@ -16,12 +20,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
   title,
   price,
   label,
+  slug,
   onAddToCart,
-  onQuickView,
   onAddToWishlist,
 }) => {
+  const router = useRouter();
+
+  const handleQuickView = () => {
+    if (slug) {
+      router.push(`/product-detail/${slug}`);
+    }
+  };
+
   return (
-       <div className="group cursor-pointer">
+    <div className="group cursor-pointer">
       <div className="relative overflow-hidden rounded-lg bg-gray-100 aspect-square mb-4">
         <Image
           src={imageSrc}
@@ -47,8 +59,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </button>
 
             <button
-              className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors duration-200"
-              onClick={onQuickView}
+              className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
+              onClick={handleQuickView} // ✅ Route with slug
             >
               <Image src="/eye.svg" alt="Quick view" width={20} height={20} />
             </button>

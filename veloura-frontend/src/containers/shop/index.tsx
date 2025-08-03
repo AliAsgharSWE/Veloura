@@ -169,6 +169,8 @@ const ShopPage: React.FC = () => {
                   title={product.title}
                   price={product.price}
                   label={product.label}
+                  slug={product.slug}
+
                   onAddToCart={() => console.log('Add to cart:', product.title)}
                   onQuickView={() => console.log('Quick view:', product.title)}
                   onAddToWishlist={() => console.log('Add to wishlist:', product.title)}
